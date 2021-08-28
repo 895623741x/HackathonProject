@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Login from "./Login/Login";
+import DashBoard from "./DashBoard/DashBoard";
+import { useStateValue } from "./StateProvider";
+import { auth } from "./firebase";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   const [{}, dispatch] = useStateValue();
+
+   useEffect(() => {
+      auth.onAuthStateChanged((authUser) => {
+         console.log("the user is", authUser);
+
+         if (authUser) {
+            dispatch({
+               type: "SET_USER",
+               user: authUser,
+            });
+         } else {
+            dispatch({
+               type: "SET_USER",
+               user: null,
+            });
+         }
+      });
+   }, []);
+
+   return (
+      <div>
+         <Router>
+            <div className="App">
+               {/* <UploadZone onSuccess={onSuccess} />
+         <Preview files={files} /> */}
+               <Switch>
+                  <Route path="/dashboard" component={() => <DashBoard />} />
+                  <Route exact path="/login" component={() => <Login />} />
+               </Switch>
+            </div>
+         </Router>
+      </div>
+   );
 }
 
 export default App;
