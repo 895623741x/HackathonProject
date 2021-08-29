@@ -1,4 +1,5 @@
 export const initialState = {
+   applications: [],
    user: null,
 };
 
@@ -8,6 +9,17 @@ const reducer = (state, action) => {
          return {
             ...state,
             user: action.user,
+         };
+      case "ADD_TO_DASHBOARD":
+         return {
+            ...state,
+            applications: [...state.applications, action.item],
+         };
+
+      case "ADD_TO_APPLICATIONS":
+         return {
+            ...state,
+            applications: [...state.applications, action.options],
          };
 
       default:

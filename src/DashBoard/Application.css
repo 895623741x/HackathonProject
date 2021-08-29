@@ -1,0 +1,15 @@
+.application {
+   display: flex;
+   margin: auto;
+   width: 60%;
+   border: 5px solid #ffff00;
+   padding: 10px;
+}
+
+.application > h5 {
+   margin: 5px;
+}
+
+.application > p {
+   margin: 5px;
+}

@@ -1,0 +1,13 @@
+.container > div {
+   display: flex;
+   flex-direction: column;
+}
+
+.container > div > button {
+   margin: 10px;
+}
+
+.container > div > button:hover {
+   background-color: rgba(255, 0, 0, 0.5);
+   transition: 1s;
+}

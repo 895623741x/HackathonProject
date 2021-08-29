@@ -1,8 +1,10 @@
 import { useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./Login/Login";
-import DashBoard from "./DashBoard/DashBoard";
+import Dashboard from "./Dashboard/Dashboard";
+import ApplicationPage from "./ApplicationPage/ApplicationPage";
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
 
@@ -34,8 +36,9 @@ function App() {
                {/* <UploadZone onSuccess={onSuccess} />
          <Preview files={files} /> */}
                <Switch>
-                  <Route path="/dashboard" component={() => <DashBoard />} />
                   <Route exact path="/login" component={() => <Login />} />
+                  <Route path="/dashboard" component={() => <Dashboard />} />
+                  <Route path="/build_application" component={() => <ApplicationPage />} />
                </Switch>
             </div>
          </Router>
