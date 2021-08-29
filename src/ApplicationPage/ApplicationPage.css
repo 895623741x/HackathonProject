@@ -11,3 +11,7 @@
    background-color: rgba(255, 0, 0, 0.5);
    transition: 1s;
 }
+
+.container > div > button:focus {
+   background-color: rgba(255, 0, 0, 0.5);
+}

@@ -1,15 +1,41 @@
 .application {
    display: flex;
    margin: auto;
-   width: 60%;
-   border: 5px solid #ffff00;
-   padding: 10px;
+   width: 100%;
 }
 
 .application > h5 {
-   margin: 5px;
+   margin: 50px;
 }
 
-.application > p {
-   margin: 5px;
+.application > div > small {
+   margin-bottom: 2px;
+}
+
+.application > div {
+   display: flex;
+   flex-direction: column;
+}
+
+.application > div {
+   margin: 50px;
+   margin-left: 100px;
+}
+
+.application {
+   border-radius: 5px 5px 0px 0px;
+   text-align: center;
+   background-color: #7cd6f8;
+   padding: 7px 0px;
+}
+
+.application > div > small {
+   margin: 0px;
+   font-size: 13px;
+}
+
+.application > div > strong {
+   width: 80%;
+   float: right;
+   text-align: right;
 }

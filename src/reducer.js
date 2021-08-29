@@ -17,6 +17,7 @@ const reducer = (state, action) => {
          };
 
       case "ADD_TO_APPLICATIONS":
+         console.log(action.options);
          return {
             ...state,
             applications: [...state.applications, action.options],

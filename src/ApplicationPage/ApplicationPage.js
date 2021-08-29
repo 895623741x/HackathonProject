@@ -1,6 +1,4 @@
-import { Button } from "bootstrap";
 import React, { useState } from "react";
-import { Form } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { useStateValue } from "../StateProvider";
 import "./ApplicationPage.css";

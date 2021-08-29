@@ -21,9 +21,8 @@ function Dashboard() {
             <Application
                primaryType={application.primaryType}
                secondaryType={application.secondaryType}
-               primaryArea={application.primaryType}
-               secondaryArea={application.secondaryType}
-               keyWords={application.keyWords}
+               primaryArea={application.primaryArea}
+               secondaryArea={application.secondaryArea}
                id={application.id}
                key={index}
             />
@@ -32,7 +31,7 @@ function Dashboard() {
          <div></div>
 
          <button onClick={addNewApplication}>
-            <AddCircleOutlineIcon />
+            <strong>+</strong>
          </button>
       </div>
    );
