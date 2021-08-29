@@ -21,6 +21,10 @@ function Header() {
       }
    };
 
+   const handleUpload = () => {
+      history.push("/csv_loading");
+   };
+
    return (
       <div>
          <nav className="header">
@@ -36,7 +40,12 @@ function Header() {
                         <ul className="member_logout">
                            <li>
                               <Button variant="" onClick={handleLogout}>
-                                 Logout
+                                 Sign Out
+                              </Button>
+                           </li>
+                           <li>
+                              <Button variant="" onClick={handleUpload}>
+                                 Upload Application
                               </Button>
                            </li>
                         </ul>

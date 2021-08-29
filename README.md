@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+## Inspiration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Research is a time-consuming process for every researcher and applicant. From the application submission to receiving by the researching institute, hundreds of assignment requests waiting to be manually matched always waste the golden time of the sample. As a result, we want to solve the tedious process that was originally charged by human resources to reduce the meaningless waiting time of expert assignments.
 
-## Available Scripts
+## What it does
 
-In the project directory, you can run:
+We create an online application system that will receive a user's application and list it on the dashboard to track whether their applications have been successfully received by the research institute. The users can either submit through the form provided by our platform or upload the CSV file directly to save the time of filling the survey.
 
-### `npm start`
+## How we built it
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The frontend page was built by the React.js framework which will help us collect the manual fill-in survey and uploaded CSV files. In the backend, we use Node.js to save the uploaded CSV files in our local storage so that the manager of the online application can also keep a copy of the CSV file to preserve it for other further utilization.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Challenges we ran into
 
-### `npm test`
+The most difficult issue was to overcome the online uploaded file storing in the local storage. We don’t want to make an extra feature to manually download the uploaded CSV since this process may cause the problem that the system manager would not instantly preserve the file that users submit.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Accomplishments that we're proud of
 
-### `npm run build`
+The challenge to automatically preserve the CSV file from the client-side is the most rewarding accomplishment that we built throughout the coding phase. We successfully added the automation process for the app to save time for both user and manager so that the researchers would not waste their time waiting for the system to check and preserve by human resources.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## What we learned
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+We learn the importance of automation that contributes to the researching community. Even though this feature does not directly make an impact on the result of research, it still indirectly boosts the quality of the research to a higher level which significantly creates a friendly environment for the users who may not have abundant time to wait for their research result.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## What's next for Brain Canada Application System
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+We will keep moving on to make the system open to the experts and applicants with more complete and compact functions to concisely reach their needs their purpose for research assignments. In the future, our team aims to design an even more automatic system such as applicant habit memory, rapid matching for researcher expertise, and matching priority for the applications with a closer deadline, to benefit the academic field with a faster, more convenient tool for them to maximally save the precious time.

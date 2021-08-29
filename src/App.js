@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./Login/Login";
 import Dashboard from "./Dashboard/Dashboard";
 import ApplicationPage from "./ApplicationPage/ApplicationPage";
+import UploadZone from "./Dashboard/UploadZone";
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
 
@@ -39,6 +40,7 @@ function App() {
                   <Route exact path="/login" component={() => <Login />} />
                   <Route path="/dashboard" component={() => <Dashboard />} />
                   <Route path="/build_application" component={() => <ApplicationPage />} />
+                  <Route path="/csv_loading" component={() => <UploadZone />} />
                </Switch>
             </div>
          </Router>
